@@ -1,10 +1,11 @@
 {
   "name": "variable-prompt",
   "displayName": "variable-prompt",
-  "description": "",
+  "icon": "src/assets/tsl-logo.png",
+  "description": "css variable prompt",
   "version": "1.0.0",
   "engines": {
-    "vscode": "^1.80.0"
+    "vscode": "^1.56.0"
   },
   "categories": [
     "Other"
@@ -24,14 +25,16 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
+    "build": "vsce package",
     "test": "node ./test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.80.0",
+    "@types/vscode": "^1.56.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "20.2.5",
     "eslint": "^8.41.0",
+    "vsce": "^2.13.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
     "typescript": "^5.1.3",
