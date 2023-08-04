@@ -4,6 +4,7 @@
   "icon": "src/assets/tsl-logo.png",
   "description": "css variable prompt",
   "version": "1.0.0",
+  "publisher": "sakanaovo",
   "engines": {
     "vscode": "^1.56.0"
   },

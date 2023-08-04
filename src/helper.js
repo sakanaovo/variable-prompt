@@ -34,8 +34,14 @@ function provideCompletionItems(document, position) {
       item.detail = color;
       // 给detail 添加注释
       const formattedDetail = `这是一个颜色变量，值为 ${color}`;
-      item.documentation = new vscode.MarkdownString(formattedDetail, true);
-      item.kind = vscode.CompletionItemKind.Variable;
+      // 创建一个 MarkdownString
+      const markdownString = new vscode.MarkdownString();
+
+      // 添加普通文本和代码块
+      markdownString.appendText(formattedDetail);
+      // 将注释转换为 markdown 格式
+      item.documentation = markdownString;
+      item.kind = vscode.CompletionItemKind.Color;
       return item;
     });
     return completionItems;
